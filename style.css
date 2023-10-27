@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+
+/* font-family: 'Alata', sans-serif;
+font-family: 'Josefin Sans', sans-serif ; head */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  width: 100%;
+  height: 590px;
+  background: url(images/desktop/image-hero.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 2rem 4rem;
+  position: relative;
+}
+header .logo {
+  cursor: pointer;
+}
+.burger {
+  display: none;
+}
+.logo-close {
+  display: none;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  left: 0;
+  padding: 1rem 1.5rem;
+  background-color: transparent;
+  z-index: 1000000;
+  transition: background-color 0.5s;
+}
+header nav.active {
+  background-color: black;
+  opacity: 0.8;
+}
+nav .nav-bar {
+  display: flex;
+}
+.nav-bar li {
+  margin-left: 2rem;
+  list-style-type: none;
+}
+.nav-bar li a {
+  text-decoration: none;
+  font-family: "Alata", sans-serif;
+  color: hsl(0, 0%, 100%);
+  font-size: 15px;
+}
+.nav-bar li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.header-banner {
+  margin-top: 10rem;
+  max-width: 450px;
+  border: 2px solid hsl(0, 0%, 100%);
+  padding: 1.5rem;
+}
+.header-banner h1 {
+  letter-spacing: 0.1rem;
+  font-weight: 100;
+  color: hsl(0, 0%, 100%);
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 50px;
+  /* font-family: "Alata", sans-serif; */
+}
+section {
+  padding: 4rem 0rem;
+  display: flex;
+  justify-content: center;
+  /* align-items: flex-end; */
+  /* gap: 30px; */
+  /* width: 100%; */
+}
+.section-img {
+  max-width: 60%;
+}
+.section-img img {
+  width: 100%;
+  height: 100%;
+}
+.section-content {
+  background-color: hsl(0, 0%, 100%);
+  padding: 2rem;
+  max-width: 40%;
+  margin-left: -10rem;
+  align-self: flex-end;
+}
+.section-content h1 {
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  color: hsl(0, 0%, 0%);
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  max-width: 300px;
+  line-height: 3rem;
+  font-size: 30px;
+}
+.section-content p {
+  color: hsl(0, 0%, 55%);
+  font-family: "Alata", sans-serif;
+  font-size: 15px;
+  max-width: 100%;
+}
+main {
+  padding: 3rem 4rem;
+  padding-bottom: 5rem;
+}
+main #mobile {
+  display: none;
+}
+main .heading {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .heading h1 {
+  font-weight: lighter;
+  text-transform: uppercase;
+  left: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+}
+main .heading button {
+  text-transform: uppercase;
+  padding: 0.7rem 2rem;
+  letter-spacing: 1px;
+  color: hsl(0, 0%, 0%);
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 55%);
+  font-size: 15px;
+  font-family: "Alata", sans-serif;
+  transition: all 0.4s linear;
+}
+
+main .heading button:hover {
+  background-color: black;
+  color: hsl(0, 0%, 100%);
+}
+.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0rem;
+  display: none;
+}
+.show button {
+  text-transform: uppercase;
+  padding: 0.7rem 2rem;
+  letter-spacing: 1px;
+  color: hsl(0, 0%, 0%);
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 55%);
+  font-size: 15px;
+  font-family: "Alata", sans-serif;
+  transition: all 0.4s linear;
+}
+.show button:hover {
+  background-color: black;
+  color: hsl(0, 0%, 100%);
+}
+.image-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 100%;
+  gap: 20px;
+}
+.images {
+  position: relative;
+  width: 100%;
+  color: hsl(0, 0%, 100%);
+  background: transparent;
+}
+.images img {
+  max-width: 100%;
+}
+.images:hover {
+  opacity: 0.5;
+  color: red;
+}
+.images h2 {
+  position: absolute;
+  bottom: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  left: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  max-width: 150px;
+  font-size: 20px;
+  z-index: 1;
+}
+.images h2:hover {
+  z-index: 2;
+}
+footer {
+  background: hsl(0, 0%, 0%);
+  padding: 3rem;
+}
+footer .logo-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+footer .logo {
+  max-width: 160px;
+}
+footer .logo img {
+  width: 100%;
+}
+
+.logo-social .social a {
+  margin-left: 0.5rem;
+}
+.socials {
+  display: none;
+}
+.socials a {
+  margin-left: 0.5rem;
+}
+.foot-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.foot-text .content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+}
+.copyright {
+  color: hsl(0, 0%, 55%);
+  font-size: 14px;
+}
+
+/* responsive */
+@media screen and (max-width: 830px) {
+  header {
+    padding: 2rem 3rem;
+  }
+  header .logo {
+    max-width: 170px;
+  }
+  header .logo img {
+    width: 100%;
+  }
+  section {
+    flex-direction: column;
+    padding: 3rem;
+    align-items: center;
+  }
+  .section-img {
+    max-width: 100%;
+  }
+  .section-content {
+    max-width: 100%;
+    margin-left: 0rem;
+    text-align: center;
+  }
+  .section-content h1 {
+    max-width: 100%;
+  }
+  .images h2 {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 660px) {
+  header .logo {
+    max-width: 150px;
+  }
+  .nav-bar li {
+    margin-left: 1rem;
+  }
+  #desktop {
+    display: none;
+  }
+  main {
+    padding: 3rem;
+  }
+  main #mobile {
+    display: block;
+  }
+  .image-container {
+    grid-template-columns: 1fr;
+  }
+  main .heading {
+    text-align: center;
+    display: block;
+  }
+  main .heading button {
+    display: none;
+  }
+  .show {
+    display: flex;
+  }
+  .foot-text {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+  nav .nav-bar {
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    /* left: 0; */
+    left: -100%;
+    background-color: hsl(0, 0%, 0%);
+    padding: 2rem 1.5rem;
+    transition: all 0.3s linear;
+    overflow: hidden;
+  }
+  nav .nav-bar.active {
+    animation: slideIn 0.3s ease-in-out forwards;
+  }
+  @keyframes slideIn {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  .nav-bar li {
+    opacity: 0;
+    padding: 0.5rem;
+  }
+  .nav-bar.active li {
+    animation: fadeIn 2s ease-in-out forwards, bounce 1s ease-in-out 3;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0); /* Start and end position, no bounce */
+    }
+    50% {
+      transform: translateY(-10px); /* Bounce up */
+    }
+  }
+  .nav-bar li:hover {
+    background-color: #555;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .logo-close {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+  }
+  .nav-bar li {
+    margin-bottom: 1.2rem;
+  }
+  .nav-bar li a {
+    text-transform: uppercase;
+    color: hsl(0, 0%, 55%);
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 520px) {
+  header {
+    padding: 2rem 1.5rem;
+    background: url(images/mobile/image-hero.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .header-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .header-banner h1 {
+    font-size: 40px;
+  }
+  section {
+    padding: 2rem 1.5rem;
+  }
+  .section-content {
+    padding: 0rem;
+  }
+  main {
+    padding: 2rem 1.5rem;
+  }
+  footer {
+    padding: 2rem 1.5rem;
+  }
+  footer .logo-social {
+    flex-direction: column;
+  }
+  .foot-text {
+    flex-direction: column;
+  }
+  .foot-text .content {
+    flex-direction: column;
+  }
+  .social {
+    display: none;
+  }
+  .socials {
+    display: block;
+  }
+}
+@media screen and (max-width: 520px) {
+  .header-banner h1 {
+    font-size: 30px;
+  }
+}
